@@ -9,17 +9,5 @@ export default defineConfig({
     alias: {
       $components: resolve(__dirname, 'src/components')
     }
-  },
-  build: {
-    rollupOptions: {
-      external: ['svelte/internal'],
-      target: 'esnext', 
-      output: 'dist', 
-      minify: 'terser',
-      sourcemap: true,
-        globals: {
-          'svelte/internal': 'svelteInternal'
-        }
-      }
   }
 });
