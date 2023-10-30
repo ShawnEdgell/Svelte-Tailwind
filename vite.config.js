@@ -13,11 +13,13 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ['svelte/internal'],
-      output: {
+      target: 'esnext', 
+      output: 'dist', 
+      minify: 'terser',
+      sourcemap: true,
         globals: {
           'svelte/internal': 'svelteInternal'
         }
       }
-    }
   }
 });
